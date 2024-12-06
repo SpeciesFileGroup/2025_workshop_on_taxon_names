@@ -12,6 +12,10 @@ Contact Matt Yoder or Debbie Paul with questions.
 
 Participation is largely set with logistics being worked out now. If you are interested in learning moore you should certainly reach out, contact Matt or Debbie. SFG is contributing funding to the logistics of the meeting, though most has been accounted-for. Larger followups, facilitated by SFG and perhaps NSF workshop money are of interest, again, reach out.
 
+## Outreach
+
+At the conclusion of the workshop we hope to have a hybrid session to communicate with our broader communities.  This need not be based on the workshop activities. Details remain to be worked out, but we anticipate either a moderated round-table discussion, and/or 15-20 minute presentations, not to exceed an hour, with time for conversation in between.  Max 2 well-padded hours. 
+
 ## Background
 
 Driven by a long-running set of use-cases and requirements largely pertaining to TaxonWorks related requests from Donald Hobern, and a need to firmly set-aside time to address these, we blocked out time to focus on the issues. Given ongoing developments at the SFG, and a need to align with other global efforts both technical, and cross domain (e.g. plants, animals) we've expanded the scope, slightly.
