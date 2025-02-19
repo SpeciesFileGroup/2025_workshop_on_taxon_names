@@ -4,17 +4,25 @@
 
 Week of March 3rd. In Person. University of Illinois, Champaign.
 
-_There will likely be 1-2 opportunities preceding and following the core workshop for zoom sessions. They will be listed here if so._
-
-Contact Matt Yoder or Debbie Paul with questions.
-
 ## Participation
 
-Participation is largely set with logistics being worked out now. If you are interested in learning moore you should certainly reach out, contact Matt or Debbie. SFG is contributing funding to the logistics of the meeting, though most has been accounted-for. Larger followups, facilitated by SFG and perhaps NSF workshop money are of interest, again, reach out.
+Participation is closed.
 
 ## Outreach
 
-At the conclusion of the workshop we hope to have a hybrid session to communicate with our broader communities.  This need not be based on the workshop activities. Details remain to be worked out, but we anticipate either a moderated round-table discussion, and/or 15-20 minute presentations, not to exceed an hour, with time for conversation in between.  Max 2 well-padded hours. 
+_An opportunity to hear from the hackathon participants as they "report out"._
+
+Thursday 10:00-11:30 CST.  Forbes 1005.
+
+Indexing a biological experiment a quintillion(?) years in the making: A round-table on the practicality of indexing and application of taxon names around the world 
+
+Please join the Species File Group and their national and international hackathon guests for short presentations and a round table discussion on the informatics challenges surrounding how we name the Earth's species. Gain insights from developers and contributors to some of the world's largest aggregators of species indices including the World Registry of Marine Organisms, Catalogue of Life, and the Global Biodiversity Informatics Facility as to the challenges behind managing and curating comprehensive global species indices. Learn how INHS Collections (and collections around the world) both benefit and contribute to these efforts, and how they drive innovation via sharing their practical needs within software-development processes.
+
+The event will held be in-person at Forbes 1005 and on Zoom at https://illinois.zoom.us/my/sfgcommons?pwd=eVI4UkdIUzdIYXRIcUhreVdES2ZQQT09. 
+
+While participation is currently closed you can read more on the hackathon here: https://github.com/SpeciesFileGroup/2025_workshop_on_taxon_names.
+
+Contact Deborah Paul if you have questions regarding the open session.
 
 ## Background
 
