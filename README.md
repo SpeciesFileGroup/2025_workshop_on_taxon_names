@@ -14,7 +14,7 @@ _An opportunity to hear from the hackathon participants as they "report out"._
 
 Thursday 10:00-11:30 CST.  Forbes 1005.
 
-Indexing a biological experiment a quintillion(?) years in the making: A round-table on the practicality of indexing and application of taxon names around the world 
+**Indexing a biological experiment a quintillion(?) years in the making: A round-table on the practicality of indexing and application of taxon names around the world** 
 
 Please join the Species File Group and their national and international hackathon guests for short presentations and a round table discussion on the informatics challenges surrounding how we name the Earth's species. Gain insights from developers and contributors to some of the world's largest aggregators of species indices including the World Registry of Marine Organisms, Catalogue of Life, and the Global Biodiversity Informatics Facility as to the challenges behind managing and curating comprehensive global species indices. Learn how INHS Collections (and collections around the world) both benefit and contribute to these efforts, and how they drive innovation via sharing their practical needs within software-development processes.
 
