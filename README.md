@@ -20,7 +20,7 @@ Please join the Species File Group and their national and international hackatho
 
 The event will held be in-person at Forbes 1005 and on Zoom at https://illinois.zoom.us/my/sfgcommons?pwd=eVI4UkdIUzdIYXRIcUhreVdES2ZQQT09. 
 
-While participation is currently closed you can read more on the hackathon here: https://github.com/SpeciesFileGroup/2025_workshop_on_taxon_names.
+While participation in the hackathon itself is currently closed you can read more on the hackathon here: https://github.com/SpeciesFileGroup/2025_workshop_on_taxon_names.
 
 Contact Deborah Paul if you have questions regarding the open session.
 
