@@ -8,6 +8,10 @@ Week of March 3rd. In Person. University of Illinois, Champaign.
 
 Participation is closed.
 
+## Products
+
+See the [products.md](./products.md) page (work in progress).
+
 ## Outreach
 
 _An opportunity to hear from the hackathon participants as they "report out"._
