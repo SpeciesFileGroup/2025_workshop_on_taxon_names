@@ -64,3 +64,18 @@ The following (with indentation reduced) is an example including a basionym, syn
     + R Ustjuzhanin, P. | 1999 | New and little-known Palaearctic Species of Alucitidae (Lepidoptera) | Far Eastern Entomologist | 68 |  | 1–7 | http://www.biosoil.ru/Files/FEE/00000102.pdf | REFERENCEID
     + R Hao, Sh., Ustjuzhanin, P.Y. & Kovtunovich, V.N | 2025 | New data on poorly-known species of many-plumes moth (Lepidioptera: Alucitidae) from China and Russia | Far Eastern Entomologist | 517 |  | 9-13 | https://doi.org/10.25221/fee.517.2 | REFERENCEID
 ```
+
+A more markdown-based representation could easily supply similar data and simultaneously be meaningful to users. The hardest part is determining a way to express the hierarchy while both avoiding ambiguity and facilitating efficient comparison between alternative sources.
+
+## Use cases
+The following use cases may help to evaluate options. These mostly focus on the challenges in improving the [Global Lepidoptera Index](https://www.checklistbank.org/dataset/55434/about) (GLI).
+
+### Summarise differences between datasets
+A tape like the second JSONL example above illustrates a possible use case:
+1. Generate a tape summarising a section of an external checklist (a regional species list, summary of a new taxonomic paper, etc.) - Plazi/Pensoft digests are close to this already.
+2. Generate a tape for the corresponding taxon (genus, etc.) from GLI.
+3. Compare the pair of tapes and derive an actionable diff tape.
+4. Human review/evaluation of proposed changes.
+5. Process the actions one at a time in the tape using the TW API for GLI. (The None actions allow the processor to find the necessary existing items to link the new data.)
+
+Having a process like this would make it much easier to expand the types of data added to GLI. At present, the workload makes it infeasible also to add type records, distribution data, etc.
