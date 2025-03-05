@@ -11,4 +11,4 @@
 
 ## Tape convo
 
-See [Taxonomic data on tape.md](./Taxonomic data on tape.md)
+See [Taxonomic data on tape.md](https://github.com/SpeciesFileGroup/2025_workshop_on_taxon_names/blob/main/Taxonomic%20data%20on%20tape.md)
