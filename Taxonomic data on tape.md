@@ -1,0 +1,30 @@
+# Taxonomic data on tape
+## Concept
+Exchange of taxonomic data between different databases and representations is challenging because of differences in data structures and terminology, the need to match records that may include small differences, etc.
+
+Although standards and representations vary, most representations rest on common or intercompatible concepts such as publication/reference/source, taxon name, taxon/otu, synonym, taxon name relation, distribution record, type material, etc.
+
+It seems reasonable to consider an interchange format that is optimised for easy generation and flexible consumption (rather than optimised for user interactions). The focus should be on granular units that represent simple assertions or sets of related assertions that a data consumer may choose to adopt. Of course, ...
+
+![image](https://github.com/user-attachments/assets/e879441c-b429-40e9-ab31-37e74dfdbd14) (XKCD 927)
+
+This has been discussed in terms of generating a "tape" of actionable data objects representing taxonomic data, either as a streaming serialisation of a dataset or as a smaller object that can be tested against an existing dataset or to represent a diff between two datasets or as a set of patch instructions for modifying a dataset. These cases are all strongly interrelated.
+
+In many/most cases, the items on such a tape can be ordered so that each item depends only on items that have already been processed (i.e, the tape avoids forward references to objects). There are some areas where this goal may be more challenging. For example, genera should normally be ordered to appear before species included in each genus, but this could conflict with normal practice in declaring the type species for the genus (as a property of the genus). To avoid the need for forward references, the relationship could be asserted as a property on the species (isTypeSpeciesFor), or it could be broken out as a TaxonNameRelationship object that follows both items, or the genus could be included twice (same identifier, properties split between the two occurrences). Using finer-grained object types (TaxonNameRelationship, etc.) may be the easiest way to accommodate such cases and maximise flexibility for the data systems generating and consuming data.
+
+## Options
+
+Two families of serialisation have been considered.
+
+1. JSONL (or similar rows, each representing a data object that a system can choose to process).
+2. A Markdown or TextTree representation that uses nesting (by paragraph level or indentation) to express the structure of the data.
+
+The following is an example JSONL representation for the root components of the classification in the [COLDP Alucitoidea](https://www.checklistbank.org/dataset/2207/about) dataset. Each row is expressed as an item of a defined class that can be added to any new dataset. ID values are internally consistent between these objects and also unique within the dataset (so they can serve as identifiers for nodes in a graph). The original identifier in the source dataset is included for information. All included properties are supplied as the Body of the record.
+```
+{"Action": "Add", "ItemClass": "Reference", "ID": "00000001", "SourceID": "42", "Body": {"ID": "00000001", "author": "Linnaeus, C.", "title": "Systema naturae per regna tria naturae: secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis", "issued": "1758", "containerTitle": "", "volume": "", "issue": "", "page": "1-824", "link": "https://www.biodiversitylibrary.org/page/726886", "citation": ""}}
+{"Action": "Add", "ItemClass": "Name", "ID": "00000002", "SourceID": "1", "Body": {"ID": "00000002", "basionymID": "00000002", "scientificName": "Animalia", "authorship": "Linnaeus, 1758", "rank": "kingdom", "uninomial": "Animalia", "genus": "", "infragenericEpithet": "", "specificEpithet": "", "infraspecificEpithet": "", "referenceID": "00000001", "publishedInPage": "9", "publishedInYear": "1758", "code": "ICZN", "status": "established", "remarks": "", "link": "https://www.biodiversitylibrary.org/page/726898"}}
+{"Action": "Add", "ItemClass": "Taxon", "ID": "00000003", "SourceID": "1", "Body": {"ID": "00000003", "parentID": "", "nameID": "00000002", "scrutinizer": "Gielis, C. & Hobern, D.", "scrutinizerDate": "2020-07-16", "provisional": "false", "referenceID": "", "extinct": "false", "temporalRangeEnd": "Holocene", "lifezone": "", "kingdom": "", "phylum": "", "class": "", "order": "", "superfamily": "", "family": "", "subfamily": "", "tribe": "", "genus": "", "uninomial": "Animalia", "species": "", "remarks": ""}}
+{"Action": "Add", "ItemClass": "Reference", "ID": "00000004", "SourceID": "107", "Body": {"ID": "00000004", "author": "von Siebold, C.T. & Stannius, H.", "title": "Lehrbuch der vergleichenden Anatomie der Wirbellosen Thiere, Erster Theil", "issued": "1848", "containerTitle": "", "volume": "", "issue": "", "page": "1-679", "link": "https://www.biodiversitylibrary.org/page/11149410", "citation": ""}}
+{"Action": "Add", "ItemClass": "Name", "ID": "00000005", "SourceID": "2", "Body": {"ID": "00000005", "basionymID": "00000005", "scientificName": "Arthropoda", "authorship": "von Siebold, 1848", "rank": "phylum", "uninomial": "Arthropoda", "genus": "", "infragenericEpithet": "", "specificEpithet": "", "infraspecificEpithet": "", "referenceID": "00000004", "publishedInPage": "4", "publishedInYear": "1848", "code": "ICZN", "status": "established", "remarks": "", "link": "https://www.biodiversitylibrary.org/page/11149394"}}
+{"Action": "Add", "ItemClass": "Taxon", "ID": "00000006", "SourceID": "2", "Body": {"ID": "00000006", "parentID": "00000003", "nameID": "00000005", "scrutinizer": "Gielis, C. & Hobern, D.", "scrutinizerDate": "2020-07-16", "provisional": "false", "referenceID": "", "extinct": "false", "temporalRangeEnd": "Holocene", "lifezone": "", "kingdom": "Animalia", "phylum": "", "class": "", "order": "", "superfamily": "", "family": "", "subfamily": "", "tribe": "", "genus": "", "uninomial": "Arthropoda", "species": "", "remarks": ""}}
+```
