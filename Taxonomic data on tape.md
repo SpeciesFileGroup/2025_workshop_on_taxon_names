@@ -43,3 +43,24 @@ Generating a JSONL tape of this kind for two versions of a dataset (or two sourc
 {'Action': 'None', 'ItemClass': 'Name', 'ID': '00000911', 'SourceID': '332', 'Body': {'ID': '00000911', 'basionymID': '00000911', 'scientificName': 'Alucita tanzanica', 'authorship': 'Ustjuzhanin & Kovtunovich, 2018', 'rank': 'species', 'uninomial': '', 'genus': 'Alucita', 'infragenericEpithet': '', 'specificEpithet': 'tanzanica', 'infraspecificEpithet': '', 'referenceID': '00000079', 'publishedInPage': '169', 'publishedInYear': '2018', 'code': 'ICZN', 'status': 'established', 'remarks': '', 'link': ''}}
 {'Action': 'Add', 'ItemClass': 'Synonym', 'ID': '00000912', 'SourceID': '', 'Body': {'taxonID': '00000910', 'nameID': '00000911', 'accordingToID': '', 'status': 'synonym', 'referenceID': '00000905', 'remarks': '', 'ID': '00000912'}}
 ```
+### TextTree tape
+The following is an example of a text tree representation including more detail than is present in the standard ChecklistBank text tree exports. The content corresponds to the information in the JSONL example above. This representation is more esoteric than the JSONL representation, but it has no need to express any identifiers - all content represents comparable information. Depth of indentation may vary between sources, but the content of each row will be identical if the same detail is represented. This makes this format much more amenable to processing using text-based diff tools or, e.g. git merge tools.
+```
++ T kingdom | Animalia | Linnaeus, 1758
+  + N kingdom | Animalia | Linnaeus, 1758 | ACCEPTED
+  + R Linnaeus, C. | 1758 | Systema naturae per regna tria naturae: secundum classes, ordines, genera, species, cum characteribus, differentiis, synonymis, locis |  |  |  | 1-824 | https://www.biodiversitylibrary.org/page/726886 | REFERENCEID
+  + T phylum | Arthropoda | von Siebold, 1848
+    + N phylum | Arthropoda | von Siebold, 1848 | ACCEPTED
+    + R von Siebold, C.T. & Stannius, H. | 1848 | Lehrbuch der vergleichenden Anatomie der Wirbellosen Thiere, Erster Theil |  |  |  | 1-679 | https://www.biodiversitylibrary.org/page/11149410 | REFERENCEID
+```
+
+The following (with indentation reduced) is an example including a basionym, synonym and more references for a species.
+```
++ T species | Alucita beinongdai | (Yang, 1977)
+  + N species | Alucita beinongdai | (Yang, 1977) | ACCEPTED
+    + N species | Orneodes beinongdai | Yang, 1977 | BASIONYM
+      + R Yang, C.Z. | 1977 | Moths of North China 1 |  |  |  |  |  | REFERENCEID
+  + N species | Alucita ussurica | Ustjuzhanin, 1999 | SYNONYM
+    + R Ustjuzhanin, P. | 1999 | New and little-known Palaearctic Species of Alucitidae (Lepidoptera) | Far Eastern Entomologist | 68 |  | 1–7 | http://www.biosoil.ru/Files/FEE/00000102.pdf | REFERENCEID
+    + R Hao, Sh., Ustjuzhanin, P.Y. & Kovtunovich, V.N | 2025 | New data on poorly-known species of many-plumes moth (Lepidioptera: Alucitidae) from China and Russia | Far Eastern Entomologist | 517 |  | 9-13 | https://doi.org/10.25221/fee.517.2 | REFERENCEID
+```
