@@ -8,3 +8,7 @@
 ## Comparison of OTT and CoLXR draft
 
   * Used https://github.com/sfborg/sf to make a sqlite db of name matches between OTT and a draft of col-xr in under an hour (comparing 3.9 million names to 9 million names)
+
+## Tape convo
+
+See [Taxonomic data on tape.md](./Taxonomic data on tape.md)
