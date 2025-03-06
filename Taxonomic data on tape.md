@@ -1,4 +1,8 @@
 # Taxonomic data on tape
+
+See issue: https://github.com/SpeciesFileGroup/2025_workshop_on_taxon_names/issues/6
+Repository on Codeberg: https://codeberg.org/dhobern/tapeworm
+
 ## Concept
 Exchange of taxonomic data between different databases and representations is challenging because of differences in data structures and terminology, the need to match records that may include small differences, etc.
 
